@@ -1,0 +1,175 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2-4</title>
+    <style>
+        body{
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 70vw;
+        }
+        header{
+            background-color: rgb(92, 1, 1);
+            border-radius: 5px;
+            color: white;
+            padding: 5px 30px;
+            display: flex;
+            align-items: center;
+        }
+        header > h1{
+            text-transform: uppercase;
+            font-size: 24px;
+            width: 50%;
+        }
+        nav{
+            display: flex;
+            width: 50%;
+            justify-content: right;
+        }
+        nav > button{
+            background-color: rgb(92, 1, 1);
+            border: none;
+            color: rgb(202, 139, 139);
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        nav > button:hover{
+            cursor: pointer;
+            color: white;
+        }
+        .transfer{
+            margin: 10px 0px;
+            background-color: gray;
+            color: white;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+        }
+        main{
+            margin: 20px 0px;
+            border-radius: 5px;
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 60% 40%;
+            grid-row: 300px;
+        }
+        main > div > img{
+            width: 100%;
+            /* height: 200px; */
+            border-radius: 4px;;
+            object-fit: contain;
+            object-position: top;
+        }
+        main > div > h1{
+            font-weight: 200;
+            margin: 30px 35px 20px 35px;
+        }
+        main > div > p{
+            margin: 10px 20px;
+        }
+        main > div > button{
+            padding: 10px;
+            background-color: rgb(36, 105, 255);
+            border: rgb(84, 137, 252);
+            border-radius: 4px;
+            color: white;
+            font-size: 13px;
+            margin-left: 70%;
+        }
+        .news{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 31% 31% 31%;
+            justify-content: space-between;
+            /* padding: 0px 50px; */
+        }
+        .news > div{
+            border: 1px rgb(237, 237, 237) solid;
+            margin: 5px;
+            /* padding: 15px; */
+        }
+        .news > div > .white{
+            background-color: rgb(254, 249, 238);
+        }
+        .news > div > .grey{
+            background-color: rgb(249, 249, 249);
+            padding: 10px;
+        }
+        .news > div > div > button{
+            padding: 10px;
+            background-color: rgb(36, 105, 255);
+            border: rgb(84, 137, 252);
+            border-radius: 4px;
+            color: white;
+            font-size: 12px;
+            margin: 6px;
+        }
+        .news > div > div > h2, p {
+            margin: 0;
+            padding: 15px;
+        }
+        .news > div > div > h2 {
+            font-weight: 600;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BBC NEWS</h1>
+        <nav>
+            <button>Politics</button>
+            <button>Sports</button>
+            <button>Science</button>
+            <button>Culture</button>
+            <button>Response</button>
+            <button>Finance</button>
+        </nav>
+    </header>
+    <main>
+        <div><img src="../images/conor.png" alt="khabib & conor"></div>
+        <div>
+            <h1>Khabib to Conor</h1>
+            <p>Khabib Nurmagomedov responded to Conor McGregor's shock retirement by saying 'there can be only one king in the jungle'</p>
+            <!-- <p>Nurmagomedov, the unbeaten UFC lightweight champion, famously defeated McGregor with ease before submitting him for good at a wild UFC 229 show that was marred by postfight riots last year.</p> -->
+            <button>Read more</button>
+        </div>
+    </main>
+    <section class="transfer">
+        <p>Football Transfer News</p>
+    </section>
+    <section class="news">
+        <div>
+            <div class="white">
+                <h2>Juventus Signed De Ligt</h2>
+                <p>De Ligt joined to Juventus for 80 million euro.</p>
+            </div>
+            <div class="grey">
+                <button>More Info</button>
+            </div>
+        </div>
+        <div>
+            <div class="white">
+                <h2>Eden Hazard in Real Madrid</h2>
+                <p>Real Madrid signed Eden Hazard for 100 million euro.</p>
+            </div>
+            <div class="grey">
+                <button>More Info</button>
+            </div>
+        </div>
+        <div>
+            <div class="white">
+                <h2>Griezmann joined to Barca</h2>
+                <p>Barcalona paid to Atletico Madrid 120 million euro.</p>
+            </div>
+            <div class="grey">
+                <button>More Info</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

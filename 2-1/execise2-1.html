@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2-1</title>
+    <style>
+        body{
+            margin: 0 auto;
+        }
+        .container{
+            margin: 50px 500px;
+            background-color:lightblue;
+            padding: 20px;
+            border-radius: 10px;
+            border: rgb(60, 108, 124);
+            box-shadow: 5px 10px rgb(137, 209, 233);
+        }
+        #name{
+            margin: 10px;
+        }
+        #cinema_time{
+            display: flex;
+        }
+        #cinema_time > div{
+            margin: 10px
+        }
+        button{
+            margin: 10px;
+            margin-top: 30px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: black solid 1px;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: rgb(71, 71, 71);
+        }
+        input[type=text]{
+            padding: 7px;
+        }
+        select{
+            padding: 7px;
+        }
+        input[type=number]{
+            padding: 7px 10px;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 540;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="name">
+            <p>Name of the movie:</p>
+            <input type="text" placeholder="Name of the movie">
+        </div>
+        <div id="cinema_time">
+            <div>
+                <p>Cinemas:</p>
+                <select name="" id="">
+                    <option value="">Kinopark</option>
+                    <option value="">Chaplin</option>
+                </select>
+            </div>
+            <div>
+                <p>Time</p>
+                <input type="number" min="0" max="23">
+                <input type="number" min="0" max="59">
+            </div>
+        </div>
+        <button>Search</button>
+    </div>
+</body>
+</html>

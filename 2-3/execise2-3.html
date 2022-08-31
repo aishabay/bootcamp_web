@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2-3</title>
+    <style>
+        body{
+            margin: 5px 10px;
+        }
+        header{
+            background-color: rgb(7, 54, 64);
+            border-radius: 5px;
+            color: white;
+            padding: 5px 30px;
+            display: flex;
+            align-items: center;
+        }
+        header > h1{
+            text-transform: uppercase;
+            font-size: 24px;
+            width: 50%;
+        }
+        nav{
+            display: flex;
+            width: 50%;
+            justify-content: right;
+        }
+        nav > button{
+            background-color: rgb(7, 54, 64);
+            border: none;
+            color: lightslategrey;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        nav > button:hover{
+            cursor: pointer;
+            background-color: rgb(11, 78, 93);
+        }
+        .welcome{
+            margin: 10px 0px;
+            background-color: gray;
+            color: white;
+            border-radius: 5px;
+            padding: 30px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .welcome + h1{
+            margin: 20px 0px;
+            font-weight: 300;
+            text-align: center;
+        }
+        main{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 25% 25% 25% 25%;
+            margin: 10px 0px;
+        }
+        main > div{
+            width: 100%;
+        }
+        main > div h2, p{
+            text-align: center;
+        }
+        main > div > img{
+            width: 100%;
+            object-fit: contain;
+        }
+        main > div > button{
+            padding: 10px;
+            background-color: rgb(36, 105, 255);
+            border: rgb(84, 137, 252);
+            border-radius: 4px;
+            color: white;
+            font-size: 13px;
+            margin-left: 36%;
+        }
+        main > div > button:hover{
+            background-color: rgb(84, 137, 252);
+        }
+        footer{
+            background-color: rgba(0, 0, 0, 0.683);
+            border-radius: 4px;
+            color: white;
+            padding: 10px;
+            margin: 30px 0px 0px 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>bitlab</span> shop</h1>
+        <nav>
+            <button>Laptops</button>
+            <button>Phones</button>
+            <button>MacBooks</button>
+            <button>Printers</button>
+        </nav>
+    </header>
+    <section class="welcome">
+        <p>Welcome to BITLAB SHOP</p>
+    </section>
+    <h1>Our products</h1>
+    <main>
+        <div>
+            <img src="../images/macbook-pro.jpeg" alt="">
+            <p>MacBook Pro 2020</p>
+            <h2>999.99$</h2>
+            <button>Buy Now</button>
+        </div>
+        <div>
+            <img src="../images/macbook-pro.jpeg" alt="">
+            <p>Macbook Air 2020</p>
+            <h2>799.99$</h2>
+            <button>Buy Now</button>
+        </div>
+        <div>
+            <img src="../images/macbook-pro.jpeg" alt="">
+            <p>MacBook Pro 2021</p>
+            <h2>1999.99$</h2>
+            <button>Buy Now</button>
+        </div>
+        <div>
+            <img src="../images/macbook-pro.jpeg" alt="">
+            <p>MacBook Air 2021</p>
+            <h2>1299.99$</h2>
+            <button>Buy Now</button>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; Developed by BITLAB TEAM, All Rights Reserved</p>
+    </footer>
+</body>
+</html>

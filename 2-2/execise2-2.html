@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2-2</title>
+    <style>
+        header{
+            background-color: rgb(40, 40, 177);
+            border-radius: 5px;
+            color: white;
+            padding: 5px 30px;
+        }
+        header > h1{
+            text-transform: uppercase;
+            font-size: 24px;
+        }
+        nav{
+            position: absolute;
+            top: 31px;
+            right: 42px;
+        }
+        nav > button{
+            background-color: rgb(40, 40, 177);
+            border: none;
+            color: white;
+            font-size: 16px;
+        }
+        main{
+            display: flex;
+        }
+        .registration{
+            margin: 30px;
+        }
+        .registration > input{
+            width: 200px;
+        }
+        .registration > button{
+            background-color: green;
+            border: 5px solid green;
+            border-radius: 5px;
+            color: white;
+            margin-top: 20px;
+            padding: 5px 10px;
+        }
+        .registration > p > a{
+            text-decoration: none;
+        }
+        .articles{
+            width: 50vw;
+        }
+        .articles > img{
+            width: 50vw;
+            border-radius: 10px;
+        }
+        .data{
+            margin: 30px;
+        }
+        table{
+            border: 3px white solid;
+        }
+        th, td{
+            border: 3px white black;
+            padding: 10px 5px;
+        }
+        thead > tr > th{
+            background-color: black;
+            color: white;
+        }
+        .part1 > tr > td{
+            background-color: green;
+            color: white;
+        }
+        .part2 > tr > td{
+            background-color: lightgreen;
+            color: black;
+        }
+        .part3 > tr > td{
+            background-color: lightgray;
+            color: black;
+        }
+        tfoot > tr > td{
+            background-color: rgb(252, 157, 173);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>bitlab news</h1>
+        <nav>
+            <button>About</button>
+            <button>Contacts</button>
+            <button>FAQ</button>
+            <button>Login</button>
+        </nav>
+    </header>
+    <main>
+        <section class="registration">
+            <p>EMAIL</p>
+            <input type="email" placeholder="Insert email">
+            <p>PASSWORD</p>
+            <input type="password" placeholder="Insert Password">
+            <button>SIGN IN</button>
+            <p>I want to create <a href="#">new account</a></p>
+        </section>
+        <section class="articles">
+            <h2>The Himalaya's hidden "paradise valleys"</h2>
+            <img src="https://ychef.files.bbci.co.uk/1600x900/p0cx4j76.webp" alt="article1 image">
+            <p>According to Tibetan Buddhists, their location will only be revealed at very specific moments in time when the world is under enormous stress and in danger of destruction.
+                Looking out of the monastery doorway at columns of rock and spires of ice soaring 7,000m into the heavens, the Buddhist monk smiled and said, "I am home. In my paradise." He then turned his attention back to the classroom where he was teaching young novice monks. I thanked him, shut the door behind me and walked away from the monastery. Away from the small village of Thame with its sturdy stone houses and fields of barley and potatoes. Away from the huge Himalayan peaks. And away from the beyul.
+            </p>
+            <h2>The remote workers swapping homes</h2>
+            <img src="https://ychef.files.bbci.co.uk/1600x900/p0cwdk6y.webp" alt="article2 image">
+            <p>With the changing nature of work, there are new possibilities for people who want to get a taste of life abroad.
+                Evie Kalo is what you might call a serial home-swapper. She and her husband are among the millions of global workers who became fully remote during the pandemic. Ever since, they’ve exchanged their two-floor apartment in an Amsterdam canal house for a series of “workcations” at homes across Europe, including in nearby Rotterdam, on the beach in Barcelona and in the tony French Riviera resort town of Juan-les-Pins. 
+            </p>
+        </section>
+        <section class="data">
+            <table>
+                <thead>
+                    <tr><th>No</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>P</th></tr>
+                </thead>
+                <tbody class="part1">
+                    <tr><td>1</td><td>Real Madrid FC</td><td>38</td><td>26</td><td>9</td><td>3</td><td>70-25</td><td>87</td></tr>
+                </tbody>
+                <tbody class="part2">
+                    <tr><td>1</td><td>Real Madrid FC</td><td>38</td><td>26</td><td>9</td><td>3</td><td>70-25</td><td>87</td></tr>
+                    <tr><td>1</td><td>Real Madrid FC</td><td>38</td><td>26</td><td>9</td><td>3</td><td>70-25</td><td>87</td></tr>
+                    <tr><td>1</td><td>Real Madrid FC</td><td>38</td><td>26</td><td>9</td><td>3</td><td>70-25</td><td>87</td></tr>
+                </tbody>
+                <tbody class="part3">
+                    <tr><td>1</td><td>Real Madrid FC</td><td>38</td><td>26</td><td>9</td><td>3</td><td>70-25</td><td>87</td></tr>
+                    <tr><td>1</td><td>Real Madrid FC</td><td>38</td><td>26</td><td>9</td><td>3</td><td>70-25</td><td>87</td></tr>
+                    <tr><td>1</td><td>Real Madrid FC</td><td>38</td><td>26</td><td>9</td><td>3</td><td>70-25</td><td>87</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr><td>1</td><td>Real Madrid FC</td><td>38</td><td>26</td><td>9</td><td>3</td><td>70-25</td><td>87</td></tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
