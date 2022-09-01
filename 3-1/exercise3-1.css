@@ -1,5 +1,5 @@
 body{
-    font-style: Helvetica;
+    font-family: Helvetica;
     background-image: linear-gradient(to right, rgb(211, 234, 242), white, rgb(254, 214, 220));
 }
 .container{
@@ -87,6 +87,13 @@ nav > button{
     background-color: white;
     padding: 10px 20px;
     text-align: left;
+    color: rgb(63, 63, 63);
+    font-size: 14px;
+}
+nav > button:hover{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
 }
 .middle{
     margin: 0px 20px;
@@ -117,7 +124,7 @@ nav > button{
 .middle > div > button:hover{
     border: 1px solid rgb(0, 35, 192);
     background-color: rgb(0, 35, 192);
-    border-radius: 5px;
+    cursor: pointer;
 }
 .middle > div{
     margin-bottom: 20px;
@@ -130,6 +137,7 @@ nav > button{
 }
 .right > div p{
     margin: 10px;
+    font-size: 15px;
 }
 .right > div > div > p:nth-of-type(1){
     font-weight: bold;
