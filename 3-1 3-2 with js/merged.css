@@ -140,10 +140,13 @@ This version is displayed when user clicks "My news" button */
 /* Middle part of the page. 
 This version is displayed when user clicks "My friends" button */
 
-.middle{
+.middle-friends {
+    display: none;
+}
+.middle-friends{
     margin: 0px 20px;
 }
-.middle > #friend-box{
+.middle-friends > #friend-box{
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 70% 30%;
@@ -157,7 +160,7 @@ This version is displayed when user clicks "My friends" button */
     grid-auto-flow: column;
     grid-template-columns: 30% 70%;
 }
-.middle > div > div > div > img{
+.middle-friends > div > div > div > img{
     width: 120px;
     height: 120px;
     border-radius: 50%;
