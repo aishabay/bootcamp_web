@@ -1,0 +1,181 @@
+body{
+    font-family: Helvetica;
+    background-image: linear-gradient(to right, rgb(211, 234, 242), white, rgb(254, 214, 220));
+}
+.container{
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 80vw;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+header{
+    margin-bottom: 10px;
+    background-color: rgb(1, 18, 92);
+    color: white;
+    padding: 5px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header > h1{
+    font-size: 24px;
+    width: 50%;
+}
+header > button{
+    background-color: rgb(1, 18, 92);
+    color: white;
+    border: none;
+    padding: 7px;
+}
+header > button:hover{
+    background-color: white;
+    color: rgb(1, 18, 92);
+    border-radius: 3px;
+    cursor: pointer;
+}
+main{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 25% 50% 25%;
+}
+#info{
+    border: 1px solid rgb(227, 227, 227);
+}
+img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    object-position: center;
+}
+#info > p{
+    margin-left: 20px;
+}
+#name{
+    font-weight: bold;
+    font-size: 20px;
+}
+#edit{
+    background-color: white;
+    border: none;
+    color: rgb(44, 44, 249);
+    font-size: 16px;
+    font-weight: 600;
+}
+#edit:hover{
+    cursor: pointer;
+}
+q{
+    color: grey;
+    font-size: 16px;
+}
+#author{
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: grey;
+}
+nav{
+    display: grid;
+    grid-auto-flow: row;
+}
+nav > button{
+    border: 1px solid rgb(227, 227, 227);
+    background-color: white;
+    padding: 10px 20px;
+    text-align: left;
+    color: rgb(63, 63, 63);
+    font-size: 14px;
+}
+nav > button:hover{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+.middle{
+    margin: 0px 20px;
+}
+.middle > #friend-box{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 70% 30%;
+    margin-bottom: 15px;
+}
+#remove-btn{
+    justify-self: end;
+}
+#img-desc{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 30% 70%;
+}
+.middle img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+#friend-desc{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+#friend-desc > p:nth-child(2){
+    color: grey;
+    font-size: 12px;
+}
+#img-desc p{
+    margin-bottom: 0px;
+}
+#img-desc button{
+    margin: 20px 0px 0px 0px;
+    width: 45%;
+    background-color: grey;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 5px 3px;
+    font-size: 12px;
+}
+#remove-btn > button{
+    padding: 10px;
+    margin: 10px 10px 0px 0px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+
+
+
+
+.right > div{
+    border: 1px solid rgb(227, 227, 227);
+}
+.right > div > div > p{
+    display: inline;
+}
+.right > div p{
+    margin: 10px;
+    font-size: 15px;
+}
+.right > div > div > p:nth-of-type(1){
+    font-weight: bold;
+}
+.right > div > div {
+    display: flex;
+    justify-content: space-between;
+}
+.right > div > p:nth-of-type(1){
+    color: rgb(47, 47, 47);
+    margin-top: 5px;
+}
+.right > div > p:nth-of-type(2){
+    color: rgb(146, 146, 146);
+}
