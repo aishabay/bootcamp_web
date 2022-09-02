@@ -1,0 +1,22 @@
+header{
+    
+}
+header > ul {
+    list-style-type: none;
+}
+header li::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../../vk.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+}
+header > ul > li {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    padding-left: 30px;
+}
