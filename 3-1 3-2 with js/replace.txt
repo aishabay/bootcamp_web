@@ -1,0 +1,92 @@
+<section class="middle">
+    <div id="friend-box">
+        <div id="img-desc">
+            <div>
+                <img src="../images/kira2.jpeg" alt="">
+            </div>
+            <div id="friend-desc">
+                <p id="friend-name">Keira Knightley</p>
+                <p><span id="friend-age">37 years, </span><span id="friend-loc">Teddington, United Kingdom</span></p>
+                <button>Send Message</button>
+            </div>
+        </div>
+        <div id="remove-btn">
+            <button>Remove</button>
+        </div>
+    </div>
+    <div id="friend-box">
+        <div id="img-desc">
+            <div>
+                <img src="../images/anne.jpeg" alt="">
+            </div>
+            <div id="friend-desc">
+                <p id="friend-name">Anne Hathaway</p>
+                <p><span id="friend-age">39 years, </span><span id="friend-loc">Brooklyn, New York, United States</span></p>
+                <button>Send Message</button>
+            </div>
+        </div>
+        <div id="remove-btn">
+            <button>Remove</button>
+        </div>
+    </div>
+    <div id="friend-box">
+        <div id="img-desc">
+            <div>
+                <img src="../images/phelps.jpeg" alt="">
+            </div>
+            <div id="friend-desc">
+                <p id="friend-name">Michael Phelps</p>
+                <p><span id="friend-age">37 year, </span><span id="friend-loc">Baltimore, Maryland, United States</span></p>
+                <button>Send Message</button>
+            </div>
+        </div>
+        <div id="remove-btn">
+            <button>Remove</button>
+        </div>
+    </div>
+    <div id="friend-box">
+        <div id="img-desc">
+            <div>
+                <img src="../images/taylor.jpeg" alt="">
+            </div>
+            <div id="friend-desc">
+                <p id="friend-name">Taylor Swift</p>
+                <p><span id="friend-age">32 year, </span><span id="friend-loc">West Reading, Pennsylvania, United States</span></p>
+                <button>Send Message</button>
+            </div>
+        </div>
+        <div id="remove-btn">
+            <button>Remove</button>
+        </div>
+    </div>
+    <div id="friend-box">
+        <div id="img-desc">
+            <div>
+                <img src="../images/cara.jpeg" alt="">
+            </div>
+            <div id="friend-desc">
+                <p id="friend-name">Cara Delevingne</p>
+                <p><span id="friend-age">30 year, </span><span id="friend-loc">Hammersmith, London, United Kingdom</span></p>
+                <button>Send Message</button>
+            </div>
+        </div>
+        <div id="remove-btn">
+            <button>Remove</button>
+        </div>
+    </div>
+    <div id="friend-box">
+        <div id="img-desc">
+            <div>
+                <img src="../images/lily.jpeg" alt="">
+            </div>
+            <div id="friend-desc">
+                <p id="friend-name">Lily Collins</p>
+                <p><span id="friend-age">33 year, </span><span id="friend-loc">Guildford, United Kingdom</span></p>
+                <button>Send Message</button>
+            </div>
+        </div>
+        <div id="remove-btn">
+            <button>Remove</button>
+        </div>
+    </div>
+</section>

@@ -41,6 +41,9 @@ main{
     grid-auto-flow: column;
     grid-template-columns: 25% 50% 25%;
 }
+
+/* Left part of the page */
+
 #info{
     border: 1px solid rgb(227, 227, 227);
 }
@@ -95,6 +98,48 @@ nav > button:hover{
     font-weight: bold;
     font-size: 16px;
 }
+
+/* Middle part of the page. 
+This version is displayed when user clicks "My news" button */
+
+.middle{
+    margin: 0px 20px;
+}
+.middle > div > p{
+    margin-top: 0;
+    font-size: 20px;
+}
+.middle > div > img{
+    border-radius: 5px;
+}
+.middle > div > p:nth-of-type(1) {
+    margin-bottom: 10px;
+}
+.middle > div > img + p{
+    color: rgb(105, 104, 104);
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.middle > div > button{
+    padding: 10px;
+    border: 1px solid rgb(1, 23, 123);
+    background-color: rgb(1, 23, 123);
+    color: white;
+    margin-left: 15px;
+}
+.middle > div > button:hover{
+    border: 1px solid rgb(0, 35, 192);
+    background-color: rgb(0, 35, 192);
+    cursor: pointer;
+}
+.middle > div{
+    margin-bottom: 20px;
+}
+
+/* Middle part of the page. 
+This version is displayed when user clicks "My friends" button */
+
 .middle{
     margin: 0px 20px;
 }
@@ -112,7 +157,7 @@ nav > button:hover{
     grid-auto-flow: column;
     grid-template-columns: 30% 70%;
 }
-.middle img{
+.middle > div > div > div > img{
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -150,6 +195,9 @@ nav > button:hover{
     border-radius: 4px;
     font-size: 12px;
 }
+
+/* Right part of the page */
+
 .right > div{
     border: 1px solid rgb(227, 227, 227);
 }
