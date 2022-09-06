@@ -6,6 +6,112 @@
     <title>Lesson 6</title>
 </head>
 <body>
-    <script></script>
+    <script>
+        var ex_num = parseInt(prompt("Which exercise do you want to check?"));
+        var result = eval("ex"+ex_num+"()");
+        console.log(result);
+
+        function ex1() {
+            var n = prompt("Enter n: ");
+            let nums = [];
+            // let strNums = "";
+            // for(let i=0;i<n;i++){
+            //     nums[i] = parseInt(prompt());
+            //     strNums = nums[i] + " " + strNums;
+            // }
+            for(let i=0;i<n;i++){
+                var new_num = parseInt(prompt());
+                nums.push(new_num);
+                // console.log(nums[i]);
+            }
+            alert(nums);
+            return nums;
+        }
+        function ex2() {
+            var n = parseInt(prompt("Enter number n: "));
+            let nums = {n};
+            for(let i=0;i<n;i++){
+                nums[i] = parseInt(prompt());
+            }
+            var max = Number.MIN_SAFE_INTEGER;
+            for(let i=0;i<n;i++){
+                if(nums[i]>max){
+                    max=nums[i];
+                }
+            }
+            alert(max);
+            return max;
+        }
+        function ex3() {
+            var n = parseInt(prompt("Enter number n: "));
+            var nums = {n};
+            for(let i=0;i<n;i++){
+                nums[i] = parseInt(prompt());
+            }
+            var sum = 0;
+            for(let i=0;i<n;i++){
+                sum += nums[i];
+            }
+            var mean = sum / n;
+            alert(sum+" "+mean);
+            return sum+" "+mean;
+        }
+        function ex4() {
+            var n = parseInt(prompt("Enter number n: "));
+            var nums = {n};
+            for(let i=0;i<n;i++){
+                nums[i] = Math.pow(parseInt(prompt()), 2);
+            }
+            let strNums = "";
+            for(let i=0;i<n;i++){
+                strNums += nums[i] + " ";
+            }
+            alert(strNums);
+            return strNums;
+        }
+        function ex5() {
+            let users = [
+                {"login":"ilyas", "password": "qwerty"},
+                {"login":"eldar", "password": "qqqqq"},
+                {"login":"assylkhan", "password": "qweqwe"},
+                {"login":"anel", "password": "asdasd"},
+                {"login":"alibek", "password": "aaaaaa"}
+                ];
+            var namePassword = prompt("Enter login and password: ");
+            var arr = namePassword.split(" ");
+            for(var i=0;i<users.length;i++){
+                if(arr[0]==users[i]["login"]&&arr[1]==users[i]["password"]){
+                    alert("Welcome, you are authenticated");
+                    return "Welcome, you are authenticated";
+                }else{
+                    alert("User not found");
+                    return "User not found";
+                }
+            } 
+        }
+        //Exercise 6 does not work!!!
+        function ex6() {
+            let books = [
+                {"name": "Harry Potter and the Philosopher's Stone", "author": "Joanne Rowling", "isbn": "1233123", "price": "50$"},
+                {"name": "Harry Potter and the Chamber of Secrets", "author": "Joanne Rowling", "isbn": "222332", "price": "40$"},
+                {"name": "Harry Potter and the Prisoner of Azkaban", "author": "Joanne Rowling", "isbn": "452323", "price": "55$"},
+                {"name": "Martin Eden", "author": "Jack London", "isbn": "987654", "price": "60$"},
+                {"name": "The Lord of the Rings", "author": "J. R. R. Tolkien", "isbn": "654321", "price": "70$"}
+                ];
+            var author = prompt("Enter the name of the author: ");
+            var text = "";
+            var arr_text = [];
+            var count = 0;
+            for(var i=0;i<books.length;i++){
+                if(author==books[i][author]){
+                    text=books[i]["name"] + " - " + books[i]["author"] + " - " + books[i]["isbn"] + " - " + books[i]["price"];
+                    arr_text[count] = text;
+                    count++;
+                }
+            } 
+            alert(arr_text);
+            return arr_text;
+        }
+    </script>
 </body>
 </html>
