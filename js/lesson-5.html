@@ -1,0 +1,202 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var ex_num = parseInt(prompt("Which exercise do you want to check?"));
+        var result = eval("ex"+ex_num+"()");
+        console.log(result);
+
+        function ex1() {
+            var x = parseInt(prompt("Insert a number:"));
+            var y = Math.pow(x, 2) + 2*x - 1;
+            alert("x2 + 2x - 1 = "+y);
+        }
+        function ex2() {
+            var a = parseInt(prompt("Insert number a:"));
+            var b = parseInt(prompt("Insert number b:"));
+            if(a%b==0){
+                alert("Divisible");
+            }
+            else{
+                alert("Not Divisible");
+            }
+        }
+        function ex3() {
+            name = prompt("Enter name: ");
+            surname = prompt("Enter surname: ");
+            city = prompt("Enter city: ");
+            age = parseInt(prompt("Enter age: "));
+            alert("Name: "+name+"\nSurname: "+surname+"\nCity: "+city+"\nAge: "+age);
+        }
+        function ex4() {
+            var a = parseInt(prompt("Insert number a:"));
+            var b = parseInt(prompt("Insert number b:"));
+            var c = parseInt(prompt("Insert number c:"));
+
+            var sum = a + b + c;
+            var diff = a - b - c;
+            var product = a * b * c;
+
+            alert("a + b + c = "+sum+"\na - b - c = "+diff+"\na * b * c = "+product);
+        }
+        function ex5() {
+            var n = prompt("Enter the number of students: ");
+            var k = prompt("Enter the number of apples: ");
+
+            var result = (k - k%n) / n;
+            alert(result);
+        }
+        function ex6(){
+            var a = parseInt(prompt("Insert the length of side a :"));
+            var b = parseInt(prompt("Insert the length of side b:"));
+
+            var result = Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
+            alert(result);
+        }
+        function ex7(){
+            var v = parseInt(prompt("Enter the speed of the car: "));
+            var s = parseInt(prompt("Enter the distance: "));
+
+            var t = s / v;
+            if(t>2.25){
+                alert("NO, YOU CAN NOT REACH");
+            }
+            else{
+                alert("YES, YOU CAN REACH");
+            }
+        }
+        function ex8() {
+            var num_viskas = parseInt(prompt("Enter the number of viskas you want to buy: "));
+            var price = 120 * num_viskas; 
+            if(price>4000){
+                price = price - price * 0.1;
+            }
+            alert(price+" KZT");
+        }
+        function ex9() {
+            var tenge = parseInt(prompt("INSERT YOUR AMOUNT IN KZT: "));
+            var currency = prompt("1- CONVERT TO USD\n2- CONVERT TO EUR\n3- CONVERT TO GBP\nChoose currency: ");
+            if(currency == 1){
+                var converted = tenge / 380;
+                var currency_sign = "USD";
+            }else if(currency ==2){
+                var converted = tenge / 430;
+                var currency_sign = "EUR";
+            }else if(currency == 3){
+                var converted = tenge / 480;
+                var currency_sign = "GBP";
+            }
+            else{
+                alert("Wrong currency number was entered");
+            }
+            alert(tenge+" KZT = "+converted.toFixed(2)+" "+currency_sign);
+        }
+        function ex10() {
+            var login = prompt("Enter login: ");
+            var password = prompt("Enter password: ");
+            if(login=="user"&&password=="qwerty"){
+                alert("Authentication completed");
+            }
+            else{
+                alert("Invalid login or password");
+            }
+        }
+        function ex11() {
+            var year = prompt("Enter year: ");
+            if(year%400==0){
+                alert("YES");
+            }
+            else if(year%4==0&&year%100!=0){
+                alert("YES");
+            }
+            else{
+                alert("NO");
+            }
+        }
+        function ex12() {
+            var score = prompt("Enter your score: ");
+            if(score>=90){
+                alert("A");
+            }else if(score>=75){
+                alert("B");
+            }else if(score>=60){
+                alert("C");
+            }else if(score>=50){
+                alert("D");
+            }else{
+                alert("F");
+            }
+        }
+        function ex13() {
+            var branch_num = prompt("Choose your branch:\n1 - Science, 2 - Humanitarian subjects, 3 - Art, 4 - Sport:");
+            if(branch_num==1){
+                let choice = prompt("1 - Math, 2 - Physics:");
+                if(choice==1){
+                    alert("You are Financier");
+                }else if(choice==2){
+                    alert("You are Engineer");
+                }
+            }else if(branch_num==2){
+                let choice = prompt("1 - History, 2 - Foreign Languages:");
+                if(choice==1){
+                    alert("You are Historic or Diplomat");
+                }else if(choice==2){
+                    alert("You are Translator");
+                }
+            }else if(branch_num==3){
+                let choice = prompt("1 - Drawing, 2 -Singing:");
+                if(choice==1){
+                    alert("You are Painter or Architect");
+                }else if(choice==2){
+                    alert("You are Singer or Tamada");
+                }
+            }else if(branch_num==4){
+                let choice = prompt("1 - Team, 2 - Individual:");
+                if(choice==1){
+                    alert("You are footballer or Basketball player");
+                }else if(choice==2){
+                    alert(" You are boxer or tennis player1");
+                }
+            }
+        }
+        function ex14() {
+            var a = parseInt(prompt("Enter side a: "));
+            var b = parseInt(prompt("Enter side b: "));
+            var c = parseInt(prompt("Enter side c: "));
+
+            if((a+b>c)&&(b+c>a)&&(a+c>b)){
+                alert("YES");
+            }else{
+                alert("NO");1
+            }
+        }
+        function ex15() {
+            var tenge = prompt("Enter amount in tenge:");
+            
+            if(tenge%380==0){
+                alert("ONLY "+eval("tenge/380")+" USD");
+            }
+            else{
+                var num_dollars = tenge/380 - tenge%380/380;
+                var num_cents = tenge%380/380 * 100;
+                alert(num_dollars+" USD and "+num_cents.toFixed()+" cents");
+            }
+        }
+        function ex16() {
+            var num = prompt("Enter the number: ");
+            var hours = num/60 - num%60/60;
+            var minutes = num%60;
+            if(minutes==0){
+                alert("ONLY "+hours+" HOURS");
+            }else{
+                alert(hours+" HOURS and "+minutes+" MINUTES");
+            }
+        }
+    </script>
+</body>
+</html>
