@@ -1,22 +1,438 @@
-header{
-    
+html{
+    margin: 0;
 }
-header > ul {
+body{
+    font-family: sans-serif;
+    position: relative;
+    margin: 0;
+}
+.container-header{
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    margin-top: 0;
+}
+header{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 72%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 70% 30%;
+    margin: 0 auto;
+}
+header ul {
     list-style-type: none;
 }
 header li::before {
     content: "";
     display: inline-block;
-    background-image: url(../../vk.png);
+    background-image: url(../images/vk.png);
     background-size: 30px;
     background-repeat: no-repeat;
     width: 30px;
     height: 30px;
     font-size: 20px;
+    vertical-align: top;
 }
-header > ul > li {
-    text-transform: uppercase;
-    font-size: 30px;
-    font-weight: 600;
+header > div > ul > li {
+    font-size: 25px;
+    font-weight: 800;
+    font-family: sans-serif;
+}
+header > div:nth-of-type(1){
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 40% 60%;
+    width: 700px;
+    /* margin-top: 7px; */
+}
+header > div > div > input{
+    padding: 7px;
+    font-size: 16px;
+    margin-top: 13px;
+    border: none;
+    background-color: rgb(244, 242, 242);
+    border-radius: 5px;
+    width: 250px;
+}
+header > div > div > input::placeholder{
+    font-size: 15px;
+}
+header > div:nth-of-type(2){
+    justify-self: right;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 35% 40% 25%;
+    grid-template-rows: 50px;
+}
+header > div:nth-of-type(2) > button{
+    padding: 7px;
+}
+svg{
+    margin-top: 20px;
+    align-self: center;
+}
+header > div:nth-of-type(2) > p{
+    margin: 21px 40px 10px 10px;
+    font-weight: 700;
+}
+header > div:nth-of-type(2) > img{
+    display: block;
+    object-fit: contain;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+.container-main{
+    position: relative;
+    z-index: 1;
+    background-color: rgb(232, 241, 246);
+    top: 50px;
+}
+main{
+    background-color: rgb(232, 241, 246);
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 20% 53% 27%;
+}
+main > #nav-left{
+    width: 150px;
+    padding-left: 5px;
+    padding-top: 25px;
+}
+main > nav > div{
+    width: 170px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 17% 83%;
+    height: 40px;
+    padding-left: 10px;
+    padding-top: 0;
+    margin-left: 8px;
+}
+/* main > nav > div:nth-of-type(1){
+    background-color: grey;
+} */
+main > nav > div:hover {
+    background-color: rgb(203, 230, 244);;
+    border-radius: 5px;
+}
+main > nav > div > svg{
+    /* justify-self: center; */
+    color: rgb(67, 131, 221);
+    margin-top: 5px;
+}
+main > nav > div > p{
+    justify-self: left;
+    padding-left: 10px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 15px 5px 10px 5px;
+}
+main > nav > div:nth-of-type(10), div:nth-of-type(12), div:nth-of-type(16), div:nth-of-type(17){
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(215, 215, 215);
+}
+#bottom-btns{
+    margin-top: 30px;
+    margin-left: 20px;
+    display: flex;
+    width: 200px;
+    line-height: 1.7;
+    flex-wrap: wrap;
+    /* grid-template-columns: 100px 100px;
+    grid-template-rows: 20px 20px 20px 20px;
+    grid-gap: 10px; */
+}
+#bottom-btns > a{
+    /* width: 100px;
+    height: 50px; */
+    margin-right: 20px;
+    color: grey;
+    text-decoration: none;
+    /* background-color: none; */
+    font-size: 12px;
+}
+.middle{
+    height: 920px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 5% 3% 92%;
+    background-color: white;
+    margin-top: 25px;
+    border-radius: 5px;
+    grid-row-gap: 20px;
+}
+.middle > .bar-friends{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 50% 50%;
+    height: 60px;
+    align-items: top;
+    padding-bottom: 10px;
+}
+.bar-friends > div:nth-of-type(1) span{
+    color: rgb(117, 117, 117);
+}
+.middle > .bar-friends > div:nth-of-type(1){
+    justify-self: left;
+}
+.middle > .bar-friends > div{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: baseline;
+    /* grid-gap: 20px; */
+}
+.middle > .bar-friends > div > button > p:nth-of-type(1){
+    justify-self: right;
+}
+.middle > .bar-friends > div > button > p:nth-of-type(2){
+    padding-left: 10px;
+    justify-self: left;
+}
+.bar-friends, .search-friends{
+    border-bottom: 2px solid rgb(232, 241, 246);
+}
+.middle button{
+    border: none;
+}
+.middle > .bar-friends > div:nth-of-type(1) > button{
+    display: grid;
+    grid-auto-flow: column;
+    margin-left: 10px;
+    width: 150px;
+    height: 35px;
+    justify-self: left;
+    align-self: center;
+    font-size: 15px;
+    background-color: white;
+}
+.middle > .bar-friends > div:nth-of-type(2) > button{
+    padding: 10px;
+    width: 130px;
+    height: 30px;
+    justify-self: right;
+    align-self: center;
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 15px;
+    background-color: rgb(67, 131, 221);
+    color: white;
+    padding: 10px 10px 25px 10px;
+    border-radius: 5px;
+}
+.search-friends{
+    height: 50px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 50% 50%;
+    align-items: bottom;
+    padding-left: 20px;
+}
+.search-friends > div:nth-of-type(1){
+    justify-self: left;
+    display: grid;
+    grid-auto-flow: column;
+    margin-left: 20px;
+}
+.search-friends > div:nth-of-type(1) > p{
+    margin-right: 10px;
+}
+.search-friends > div:nth-of-type(1) > input{
+    border: none;
+    height: 30px;
+    align-self: center;
+}
+.search-friends > div:nth-of-type(2){
+    justify-self: right;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    width: 150px;
+}
+.search-friends > div:nth-of-type(2) > p{
+    font-size: 15px;
+    color: rgb(67, 131, 221);
+    justify-self: right;
+}
+.search-friends > div:nth-of-type(2) > svg{
+    margin-bottom: 22px;
+    margin-left: 5px;
+    color: rgb(67, 131, 221);
+}
+.list-friends{
+    display: flex;
+    flex-direction: column;
+}
+.list-friends > #friend-box{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 70% 30%;
+    margin-bottom: -20px;
+    padding: 20px;
+    border-bottom: 2px solid rgb(232, 241, 246);
+}
+.list-friends > #friend-box:last-of-type{
+    border-bottom: transparent;
+}
+#dots-btn{
+    justify-self: end;
+}
+#img-desc{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 30% 70%;
+}
+.list-friends img{
+    margin-top: 10px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+#friend-desc{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+#friend-desc > p:nth-child(1){
+    margin-top: 5px;
+    color: rgb(45, 90, 154);
+}
+#friend-desc > p:nth-child(2){
+    color: grey;
+    font-size: 12px;
+}
+#img-desc p{
+    margin-bottom: 0px;
+}
+#img-desc button{
+    margin: 13px 0px 0px -7px;
+    width: 50%;
+    background-color: white;
+    color: rgb(55, 110, 187);
+    border-radius: 4px;
+    border: none;
+    padding: 5px 3px;
+    font-size: 14px;
+}
+#dots-btn > button{
+    /* height: 5px; */
+    margin: 10px 10px 0px 0px;
+    background-color: white;
+    color: grey;
+    /* border: none; */
+    border-radius: 4px;
+    font-size: 20px;
+}
+.list-friends > hr{
+    width: 90%;
+    color: rgb(176, 176, 176);
+}
+.right-top{
+    justify-self: right;
+    width: 250px;
+    height: 230px;
+    margin-top: 25px;
+    position: relative;
+    top: 0px;
+    background-color: white;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 25px;
+    border-radius: 5px;
+}
+.right-top > nav:nth-of-type(1){
+    font-size: 15px;
+    width: 100%;
+}
+.right-top > nav:nth-of-type(1) > div:nth-of-type(1){
+    margin-top: 10px;
+}
+.right-top > nav:nth-of-type(1) > div{
+    width: 88%;
+    height: 15px;
+    padding: 10px 0px 10px 30px;
+    color: rgb(67, 131, 221);
+    /* border: 1px solid black; */
+}
+.right-top > nav:nth-of-type(1) > div:hover{
+    color: black;
+    background-color: rgb(244, 242, 242);
+    font-weight: bold;
+    border-left: 2px solid rgb(67, 131, 221);
+}
+.right-top > nav:nth-of-type(1) > div:nth-of-type(5){
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(232, 241, 246);
+}
+.right-top span{
+    font-size: 10px;
+    vertical-align: text-top;
+}
+.right-top > nav:nth-of-type(1) > div:nth-of-type(6){
+    padding-bottom: 10px;
+}
+
+/* Potential friends */
+
+.right-top > nav:nth-of-type(2){
+    height: 370px;
+    background-color: white;
+    border-radius: 5px;
+}
+.right-top > nav:nth-of-type(2) > p{
+    margin-bottom: 10px;
     padding-left: 30px;
+    font-size: 15px;
+}
+.p-friend{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 25% 75%;
+    column-gap: 10px;
+    width: 90%;
+    /* background-color: grey; */
+    padding: 10px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+.p-friend > .p-friend-img{
+    height: 70px;
+    width: 70px;
+}
+.p-friend > div > p{
+    margin: 10px;
+}
+.p-friend .common-friends{
+    color: rgb(117, 117, 117);
+    font-size: 15px;
+}
+.p-friend .name{
+    color: rgb(45, 90, 154);
+    font-size: 15px;
+}
+.p-friend > div > button{
+    background-color: transparent;
+    border: none;
+    color:rgb(55, 110, 187);
+}
+.right-top > nav:nth-of-type(2) img{
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding-top: 10px;
 }
