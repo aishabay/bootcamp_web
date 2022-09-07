@@ -1,0 +1,148 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7</title>
+</head>
+<body>
+    <script>
+        var ex_num = parseInt(prompt("Which exercise do you want to check?"));
+        var result = eval("ex"+ex_num+"()");
+        console.log(result);
+
+        function ex1() {
+            var n = prompt("Enter n: ");
+            let nums = [];
+            for(let i=0;i<n;i++){
+                var new_num = parseInt(prompt());
+                nums.push(new_num);
+            }
+            var m = prompt("Enter m: ");
+            var index_m = 0;
+            var result = false;
+            for(let i=0;i<n;i++){
+                if(nums[i]==m){
+                    index_m = i;
+                    result = true;
+                    break;
+                }
+            }
+            if(result==true){
+                alert("YES " + index_m);
+                return "YES " + index_m;
+            }else{
+                alert("NO");
+                return "NO";
+            }
+        }
+        function ex2() {
+            var nums = [];
+            while (true){
+                var num = parseInt(prompt("Enter a number: "));
+                if(num==0) break;
+                nums.push(num);
+            }
+            var product = 1;
+            for(let num of nums){
+                product *= num;
+            }
+            var geom_mean = (Math.pow(product, (1/nums.length))).toFixed(3);
+            alert(geom_mean);
+            return geom_mean;
+        }
+        function ex3() {
+            var nums = [];
+            while (true){
+                var num = parseInt(prompt("Enter a number: "));
+                if(num==0) break;
+                if(num>0) nums.push(num);
+            }
+            alert(nums);
+            return nums;
+        }
+        function ex4() {
+            var n = prompt("Enter n: ");
+            let nums = [];
+            var product = 1;
+            for(let i=0;i<n;i++){
+                var new_num = parseInt(prompt());
+                nums.push(new_num);
+                if(new_num!=0) product *= new_num;
+            }
+            alert(product);
+            return product;
+        }
+        function ex5() {
+            let cars = [
+                {"name": "Mercedes", "year": 2015, "volume": 2.4, "price": 12000000},
+                {"name": "Mercedes", "year": 2012, "volume": 2.0, "price": 8000000},
+                {"name": "Mercedes", "year": 2018, "volume": 3.0, "price": 20000000},
+                {"name": "Toyota", "year": 2011, "volume": 2.4, "price": 12000000},
+                {"name": "Toyota", "year": 2009, "volume": 3.8, "price": 11000000},
+                {"name": "BMW", "year": 2012, "volume": 2.2, "price": 9000000},
+                {"name": "Lexus", "year": 2015, "volume": 3.0, "price": 70000000},
+            ];
+            while (true){
+                var command = parseInt(prompt("INSERT [1] TO SEARCH BY NAME\nINSERT [2] TO SEARCH BY YEAR\nINSERT [3] TO SEARCH BY ENGINE VOLUME\nINSERT [4] TO SEARCH BY PRICE\nINSERT [5] TO EXIT"));
+                if(command==1){
+                    let name = prompt("INSERT NAME OF THE CAR:");
+                    let text = "";
+                    let arr_text = [];
+                    for(let car of cars){
+                        if(name==car["name"]){
+                            text="\n" + car["name"] + " - " + car["year"] + " - " + car["volume"] + " - " + car["price"];
+                            arr_text.push(text);
+                        }
+                    }
+                    alert(arr_text);
+                    return arr_text;
+                }
+                if(command==2){
+                    let start_year = parseInt(prompt("INSERT START YEAR:"));
+                    let end_year = parseInt(prompt("INSERT END YEAR:"));
+                    let text = "";
+                    let arr_text = [];
+                    for(let car of cars){
+                        if(car["year"]>=start_year&&car["year"]<=end_year){
+                            text="\n" + car["name"] + " - " + car["year"] + " - " + car["volume"] + " - " + car["price"];
+                            arr_text.push(text);
+                        }
+                    }
+                    alert(arr_text);
+                    return arr_text;
+                }
+                if(command==3){
+                    let start_volume = parseFloat(prompt("INSERT START VOLUME:"));
+                    let end_volume = parseFloat(prompt("INSERT END VOLUME:"));
+                    let text = "";
+                    let arr_text = [];
+                    for(let car of cars){
+                        if(car["volume"]>=start_volume&&car["volume"]<=end_volume){
+                            text="\n" + car["name"] + " - " + car["year"] + " - " + parseFloat(car["volume"]).toFixed(1) + " - " + car["price"];
+                            arr_text.push(text);
+                        }
+                    }
+                    alert(arr_text);
+                    return arr_text;
+                }
+                if(command==4){
+                    let start_price = parseFloat(prompt("INSERT START PRICE:"));
+                    let end_price = parseFloat(prompt("INSERT END PRICE:"));
+                    let text = "";
+                    let arr_text = [];
+                    for(let car of cars){
+                        if(car["price"]>=start_price&&car["price"]<=end_price){
+                            text="\n" + car["name"] + " - " + car["year"] + " - " + parseFloat(car["volume"]).toFixed(1) + " - " + car["price"];
+                            arr_text.push(text);
+                        }
+                    }
+                    alert(arr_text);
+                    return arr_text;
+                }
+                if(command==5) break;
+            }
+        }
+    </script>
+</body>
+</html>
