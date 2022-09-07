@@ -143,6 +143,39 @@
                 if(command==5) break;
             }
         }
+        function ex6(){
+            var students = [];
+            while (true) {
+                var command = parseInt(prompt("PRESS 1 TO ADD STUDENT\nPRESS 2 TO LIST STUDENT\nPRESS 0 TO EXIT"));
+                var student = {};
+                if(command==1){
+                    var name = prompt("INSERT NAME:");
+                    student.name = name;
+                    var surname = prompt("INSERT SURNAME:");
+                    student.surname = surname;
+                    var gpa = parseFloat(prompt("INSERT GPA:"));
+                    student.gpa = gpa;
+                    // student.push("name": name, "surname": surname, "gpa": gpa);
+                    students.push(student);
+                }
+                else if(command==2){
+                    var text = "";
+                    var arr_text = [];
+                    var count = 0;
+                    for(let student of students){
+                        text="\n" + student["name"] + " - " + student["surname"] + " - " + student["gpa"];
+                        arr_text[count] = text;
+                        count++;
+                    }
+                    alert(arr_text);
+                }
+                else if(command==0) break;
+                else{
+                    alert("You entered incorrect number. Try again.");
+                    continue;
+                }
+            }           
+        }
     </script>
 </body>
 </html>
