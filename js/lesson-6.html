@@ -103,8 +103,8 @@
             var arr_text = [];
             var count = 0;
             for(var i=0;i<books.length;i++){
-                if(author==books[i][author]){
-                    text=books[i]["name"] + " - " + books[i]["author"] + " - " + books[i]["isbn"] + " - " + books[i]["price"];
+                if(author==books[i]["author"]){
+                    text="\n" + books[i]["name"] + " - " + books[i]["author"] + " - " + books[i]["isbn"] + " - " + books[i]["price"];
                     arr_text[count] = text;
                     count++;
                 }
