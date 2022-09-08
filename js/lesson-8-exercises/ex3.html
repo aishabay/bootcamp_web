@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex3</title>
+    <style>
+        body{
+            margin: 0 auto;
+        }
+        .container {
+            margin: 0 auto;
+            margin-top: 200px;
+            width: 700px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: repeat(4, 100px);
+            column-gap: 30px;
+        }
+        input{
+            font-size: 20px;
+        }
+        #card1, #card2, #card3, #card4 {
+            width: 100px;
+            height: 50px;
+        }
+        #name{
+            width: 330px;
+            height: 50px;
+        }
+        #cvv{
+            width: 70px;
+            height: 50px;
+        }
+        p{
+            font-weight: bold;
+        }
+        button {
+            width: 150px;
+            height: 70px;
+            grid-column: 2;
+            grid-row: 4;
+            justify-self: end;
+            background-color: lightblue;
+            border: lightblue 1px solid;
+            border-radius: 10px;
+            color: midnightblue;
+            font-size: 18px;
+        }
+        button:hover{
+            cursor: pointer;
+            border: midnightblue 5px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>CARD:</p>
+        <div>
+            <input id="card1" type="text" maxlength="4">
+            <input id="card2" type="text" maxlength="4">
+            <input id="card3" type="text" maxlength="4">
+            <input id="card4" type="text" maxlength="4">
+        </div>
+        <p>NAME SURNAME:</p>
+        <div><input id="name" type="text"></div>
+        <p>CVV:</p>
+        <div><input id="cvv" type="password" maxlength="3"></div>
+        <button id="btn">COMPLETE</button>
+    </div>
+
+    <script type="text/javascript">
+        let cards = [
+                {"number": "1111222233334444", "cvv": "123" },
+                {"number": "5555666677778888", "cvv": "567" },
+                {"number": "9999888877776666", "cvv": "987" },
+        ];
+
+        function check() {
+            let cardField1 = card1;
+            let cardField2 = card2;
+            let cardField3 = card3;
+            let cardField4 = card4;
+            let cvvField = cvv;
+
+            let card_num = parseInt(cardField1.value + cardField2.value + cardField3.value+ cardField4.value);
+            console.log(card_num);
+            let cvv_num = parseInt(cvvField.value);
+            console.log(cvv_num);
+            if(cardField1 != '' && cardField2 != '' && cardField3 != '' && cardField4 != '' && cvvField != ''){
+                let authenticated = false;
+                for (let i=0;i<cards.length;i++) {
+                    console.log(cards[i]["number"]+" "+cards[i]["cvv"]+"\n");
+                    if (card_num == cards[i]["number"] && cvv_num == cards[i]["cvv"]) {
+                        authenticated = true;
+                        break;
+                    } else {
+                        authenticated = false;
+                    }
+                }
+                if(authenticated == true){
+                    alert("Transaction completed");
+                }else{
+                    alert("Invalid Data");
+                }
+            }
+        }
+
+        btn.addEventListener('click', check);
+
+    </script>
+</body>
+</html>

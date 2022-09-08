@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex6</title>
+    <style>
+        .container {
+            margin: 0 auto;
+            margin-top: 200px;
+            width: 400px;
+            height: 500px;
+        }
+
+        input {
+            width: 500px;
+            height: 50px;
+            font-size: 18px;
+        }
+
+        button {
+            display: block;
+            margin-top: 30px;
+            width: 100px;
+            height: 70px;
+            background-color: blanchedalmond;
+            border: blanchedalmond 1px solid;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        button:hover{
+            background-color: rgb(246, 202, 136);
+            border: rgb(246, 202, 136) 1px solid;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .message{
+            font-size: 3px;
+            color: white;
+        }
+        .error{
+            font-size: 16px;
+            color: red;
+        }
+        .successful_registration{
+            font-size: 19px;
+            color: lightgreen;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Email:</p>
+        <input id="email" type="email">
+        <div class="message" id="error_email">Current email is already in use</div>
+        <p>Password:</p>
+        <input id="password1" type="password">
+        <div class="message" id="error_password">Password length must be at least 6 symbols</div>
+        <p>Retype Password:</p>
+        <input id="password2" type="password">
+        <div class="message" id="error_repassword">Passwords are not the same</div>
+        <button id="btn">REGISTER</button>
+        <div class="message" id="registration">Congratulations! You have successfully registered.</div>
+    </div>
+
+    <script>
+        let people = [
+            { "email": "aisha@gmail.com", "password": "12345" },
+            { "email": "aibek@gmail.com", "password": "54321" },
+            { "email": "ilyas@gmail.com", "password": "qwerty" },
+        ];
+        // alert(password);
+        function check() {
+            document.getElementById("error_email").className = "message";
+            document.getElementById("error_password").className = "message";
+            document.getElementById("error_repassword").className = "message";
+            document.getElementById("registration").className = "message";
+
+            let emailName = email.value;
+            // console.log(login);
+            let passwordName = password1.value;
+            let repasswordName = password2.value;
+            // console.log(password);
+            let email_free = false;
+            for (let i=0;i<people.length;i++) {
+                // console.log(people[i]["login"]+" "+people[i]["password"]+"\n");
+                if (emailName == people[i]["email"]) {
+                    email_free = false;
+                    break;
+                } else {
+                    email_free = true;
+                }
+            }
+            if(email_free == false){
+                document.getElementById("error_email").className = "error";
+            }
+
+            let correct_password_length = false;
+            if(passwordName.length >= 6) correct_password_length = true;
+            if(correct_password_length == false){
+                document.getElementById("error_password").className = "error";
+            }
+
+            let password_match = false;
+            if(passwordName == repasswordName) password_match = true;
+            if(password_match == false){
+                document.getElementById("error_repassword").className = "error";
+            }
+
+            if(email_free == true && correct_password_length == true && password_match == true){
+                let person = {};
+                person.email = emailName;
+                person.password = passwordName;
+                people.push(person);
+                console.log(people);
+                email.value = "";
+                password1.value = "";
+                password2.value = "";
+                document.getElementById("registration").className = "successful_registration";
+            }
+
+        }
+
+        btn.addEventListener('click', check);
+    </script>
+</body>
+</html>

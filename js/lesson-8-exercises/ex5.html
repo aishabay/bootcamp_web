@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .container{
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 1000px;
+        }
+        #slider{
+            border-radius: 10px;
+            /* border: 3px black solid; */
+        }
+        img{
+            margin: 0 auto;
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            object-position: top;
+        }
+        #btns{
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #btns > div{
+            width: 150px;
+            height: 100px;
+        }
+        #btns > div > img{
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            object-position: top;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="slider">
+            <img id="main_pic" src="../../images/aang.png" alt="aang">
+        </div>
+        <div id="btns">
+            <div><img id="pic0" src="../../images/aang.png" alt="aang"></div>
+            <div><img id="pic1" src="../../images/azula.jpeg" alt="azula"></div>
+            <div><img id="pic2" src="../../images/katara.jpeg" alt="katara"></div>
+            <div><img id="pic3" src="../../images/toph.png" alt="toph"></div>
+            <div><img id="pic4" src="../../images/zuko.jpeg" alt="zuko"></div>
+        </div>
+    </div>
+
+    <script>
+        let images = ["aang.png", "azula.jpeg", "katara.jpeg", "toph.png", "zuko.jpeg"];
+        for(let i=0;i<images.length;i++){
+            images[i] = "../../images/" + images[i];
+        }
+        
+        var count = 0;
+        $("#pic0").click(function() {
+            count = 0;
+            main_pic.src = images[count];
+        });
+        $("#pic1").click(function() {
+            count = 1;
+            main_pic.src = images[count];
+        });
+        $("#pic2").click(function() {
+            count = 2;
+            main_pic.src = images[count];
+        });
+        $("#pic3").click(function() {
+            count = 3;
+            main_pic.src = images[count];
+        });
+        $("#pic4").click(function() {
+            count = 4;
+            main_pic.src = images[count];
+        });
+
+        // function changePicTo1() {
+        //     count = 1;
+        //     main_pic.src = images[count];
+        // }
+        // pic1.addEventListener('click', changePic);
+
+        // var count = 0;
+        // $(".pic").click(function() {
+        //     let id_name = this.id;
+        //     console.log(id_name);
+        //     let arr_numbers_id = [];
+        //     for(let character of id_name){
+        //         if(character.isNaN()==false){
+        //             arr_numbers_id.push(character);
+        //         }
+        //     }
+        //     count = arr_numbers_id.join();
+        //     main_pic.src = images[count];
+        // });
+    </script>
+</body>
+</html>

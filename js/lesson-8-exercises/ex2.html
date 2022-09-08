@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2</title>
+    <style>
+        body{
+            margin: 0 auto;
+            width: 1000px;
+            font-size: 40px;
+
+        }
+        .container{
+            margin-top: 200px;
+            display: grid;
+            grid-auto-flow: column;
+            /* grid-template-columns: repeat(3, 300px); */
+            align-items: baseline;
+            justify-content: space-around;
+        }
+        button{
+            width: 200px;
+            height: 100px;
+            background-color: rgb(65, 65, 237);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 50px;
+        }
+        button:hover{
+            background-color: rgb(48, 48, 239);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="btn_add">+</button>
+        <div id="number" name="number">0</div>
+        <button id="btn_subt">-</button>
+
+        <script>
+            function inc() {
+                let num = parseInt(document.getElementById('number').innerText);
+                console.log(num);
+                num++;
+                document.getElementById('number').innerText = num;
+            }
+            function dec() {
+                let num = parseInt(document.getElementById('number').innerText);
+                num--;
+                document.getElementById('number').innerText = num;
+            }
+
+            btn_add.addEventListener('click', inc);
+            btn_subt.addEventListener('click', dec);
+        </script>
+    </div>
+</body>
+</html>

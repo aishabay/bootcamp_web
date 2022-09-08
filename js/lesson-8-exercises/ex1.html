@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex1</title>
+    <style>
+        .container {
+            margin: 0 auto;
+            margin-top: 200px;
+            width: 400px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: repeat(3, 100px);
+        }
+
+        input {
+            width: auto;
+            height: 50px;
+            font-size: 18px;
+        }
+
+        button {
+            width: 100px;
+            height: 70px;
+            grid-column: 2;
+            grid-row: 3;
+            justify-self: end;
+            background-color: blanchedalmond;
+            border: blanchedalmond 1px solid;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: rgb(246, 202, 136);
+            border: rgb(246, 202, 136) 1px solid;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #authentificated{
+            font-size: 40px;
+            text-align: center;
+            color: lightgreen;
+            margin-top: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>LOGIN:</p>
+        <input id="log" type="text" />
+        <p>PASSWORD:</p>
+        <input id="pass" type="password" />
+        <button id="btn">SIGN IN</button>
+    </div>
+
+    <script type="text/javascript">
+        let people = [
+                { "login": "aisha", "password": "12345" },
+                { "login": "aibek", "password": "54321" },
+                { "login": "ilyas", "password": "qwerty" },
+            ];
+        // alert(password);
+        function check() {
+            let login = log.value;
+            // console.log(login);
+            let password = pass.value;
+            // console.log(password);
+            let authenticated = false;
+            for (let i=0;i<people.length;i++) {
+                // console.log(people[i]["login"]+" "+people[i]["password"]+"\n");
+                if (login == people[i]["login"] && password == people[i]["password"]) {
+                    authenticated = true;
+                    break;
+                    // alert("true");
+                    // return true;
+                } else {
+                    authenticated = false;
+                    // alert("false");
+                    // return false;
+                }
+            }
+            if(authenticated == true){
+                alert("true");
+                document.body.innerHTML = "<div id=\"authentificated\">You are authenticated</div>";
+            }else{
+                alert("false");
+                log.style.borderColor = "red";
+                pass.style.borderColor = "red";
+            }
+        }
+
+        btn.addEventListener('click', check);
+
+    </script>
+</body>
+</html>
