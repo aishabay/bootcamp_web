@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .container{
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 3px solid black;
+            border-radius: 10px;
+            padding: 30px;
+            width: 1000px;
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: space-around;
+        }
+        .container > div:first-of-type{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 150px 50px;
+            grid-template-rows: 50% 50%;
+            column-gap: 20px;
+        }
+        .container > div:first-of-type > p{
+            grid-column: span 2;
+            grid-row: 1;
+        }
+        .container > div{
+            width: 200px;
+        }
+        input{
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            padding: 5px;
+        }
+        input:read-only{
+            background-color: rgb(236, 236, 236);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <p>Enter your cash:</p>
+            <input id="num" type="number">
+            <select id="crs">
+                <option value="KZT">KZT</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+        <div>
+            <p>KZT (tenge)</p>
+            <input id="kzt" type="text" readonly>
+        </div>
+        <div>
+            <p>USD (dollar)</p>
+            <input id="usd" type="text" readonly>
+        </div>
+        <div>
+            <p>EUR (euro)</p>
+            <input id="eur" type="text" readonly>
+        </div>
+    </div>
+
+    <script>
+        $('#crs').change(function(){
+            let number = num.value;
+            let currency = crs.value;
+            
+            if(currency == "KZT"){
+                let amount_usd = toUSD();
+                let amount_eur = toEUR();
+
+                usd.value = amount_usd;
+                eur.value = amount_eur;
+                kzt.value = "-"
+            }
+            if(currency == "USD"){
+                let amount_eur = toEUR();
+                let amount_kzt = toKZT();
+
+                eur.value = amount_eur;
+                kzt.value = amount_kzt;
+                usd.value = "-"
+            }
+            if(currency == "EUR"){
+                let amount_usd = toUSD();
+                let amount_kzt = toKZT();
+
+                usd.value = amount_usd;
+                kzt.value = amount_kzt;
+                eur.value = "-"
+            }
+
+            // alert($(this).val());
+
+            function toUSD() {
+                if(currency == "KZT"){
+                    return (number/431).toFixed(2);
+                }else if(currency == "EUR"){
+                    return (number*507/429).toFixed(2);
+                }
+            }
+            function toEUR() {
+                if(currency == "KZT"){
+                    return (number/509).toFixed(2);
+                }else if(currency == "USD"){
+                    return (number*429/507).toFixed(2);
+                }
+            }
+            function toKZT() {
+                if(currency == "USD"){
+                    return (number*429).toFixed(2);
+                }else if(currency == "EUR"){
+                    return (number*507).toFixed(2);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
