@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 8</title>
+    <style>
+        .container {
+            width: 50vw;
+            position: relative;
+            left: 25%;
+            top: 10%;
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 150px 150px 150px;
+            column-gap: 50px;
+            row-gap: 50px;
+        }
+        #title{
+            font-size: 40px;
+            color: midnightblue;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button{
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            background-color: lightblue;
+            border: lightblue 1px solid;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        button:hover{
+            background-color: rgb(121, 198, 223);
+            border: rgb(121, 198, 223) 1px solid;
+            cursor: pointer;
+        }
+        button a:visited{
+            color: black;
+        }
+        button a:link{
+            color: midnightblue;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title">Lesson 9 exercises</div>
+    <div class="container">
+        <button id="ex1" onclick="window.open('lesson-9-exercises/ex1.html', '_blank')">Exercise 1</button>
+        <button id="ex2" onclick="window.open('lesson-9-exercises/ex2-1.html', '_blank')">Exercise 2</button>
+        <button id="ex3" onclick="window.open('lesson-9-exercises/ex3.html', '_blank')">Exercise 3</button>
+    </div>
+
+    <!-- <script type="text/javascript">
+        document.getElementById("ex1").onclick = function () {
+            location.href = "lesson-9-exercises/ex1.html";
+        };
+        document.getElementById("ex2").onclick = function () {
+            location.href = "lesson-9-exercises/ex2.html";
+        };
+        document.getElementById("ex3").onclick = function () {
+            location.href = "lesson-9-exercises/ex3.html";
+        };
+    </script> -->
+</body>
+
+</html>

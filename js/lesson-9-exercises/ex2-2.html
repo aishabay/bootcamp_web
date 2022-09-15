@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2-2</title>
+    <style>
+        /* body{
+            border: 5px solid black;
+        } */
+        .container{
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 600px;
+            /* border: 3px solid black; */
+        }
+        .header, .items{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: 50px;
+            padding: 10px;
+            /* border: 1px black solid; */
+            justify-content: space-around;
+        }
+        .header{
+            border-bottom: 2px solid black;
+        }
+        .items{
+            border-bottom: 1px solid black;
+        }
+        h3, p, button{
+            /* border: 3px black solid; */
+            text-align: center;
+        }
+        #remove{
+            width: 100px;
+            height: 40px;
+            justify-self: center;
+            background-color: red;
+            border: none;
+            color: white;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+        #container_back{
+            width: 100%;
+            height: 70px;
+            padding: 10px;
+        }
+        #back{
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            text-transform: uppercase;
+            width: 150px;
+            height: 40px;
+            margin-top: 30px;
+            position: relative;
+            left: 44%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="header">
+            <h3>Name</h3>
+            <h3>Price</h3>
+            <h3>Remove</h3>
+        </div>
+        <div class="items">
+            <p>Name</p>
+            <p>Price</p>
+            <button id="remove">- Remove</button>
+        </div> -->
+    </div>
+
+
+    <script src="ex2.js">
+        // page2();
+    </script>
+</body>
+</html>

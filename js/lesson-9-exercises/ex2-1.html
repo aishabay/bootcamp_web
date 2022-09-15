@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2-1</title>
+    
+    <style>
+        .container{
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 400px;
+            display: grid;
+            row-gap: 5px;
+            /* grid-auto-flow: row; */
+            /* grid-template-rows: repeat(2, 300px); */
+        }
+        .container > div{
+            border: 1px rgb(189, 189, 189) solid;
+            border-radius: 3px;
+            padding: 10px;
+        }
+        .container > div > p:first-of-type{
+            font-weight: bold;
+            font-size: 17px;
+        }
+        .container > div > p:nth-of-type(2){
+            color: grey;
+            font-size: 15px;
+        }
+        button{
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+        #go{
+            width: 150px;
+            height: 40px;
+            justify-self: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div>
+            <p><span id="good_name">IPhone 12 PRO</span> - <span id="good_price">1200 USD</span></p>
+            <p id="good_info">6 GB RAM, Memory 128 GB, double front back camera</p>
+            <button id="add">+ Add to basket</button>
+        </div> -->
+
+
+        <!-- <div>
+            <p><span id="good_name">Xiaomi Redmi Note 8</span> - <span id="good_price">250 USD</span></p>
+            <p id="good_info">6 GB RAM, Memory 64 GB, 3 cameras on back</p>
+            <button id="add">+ Add to basket</button>
+        </div>
+        <div>
+            <p><span id="good_name">Asus Tuf Gaming Pro</span> - <span id="good_price">1500 USD</span></p>
+            <p id="good_info">24 GB RAM, SSD 1 TB, RX Radeon</p>
+            <button id="add">+ Add to basket</button>
+        </div>
+        <div>
+            <p><span id="good_name">Samsung Galaxy Note 13</span> - <span id="good_price">999 USD</span></p>
+            <p id="good_info">4 GB RAM, Memory 256 GB, front-back cameras</p>
+            <button id="add">+ Add to basket</button>
+        </div> -->
+
+
+        <!-- <div>
+            <p><span id="good"></span><span id="price"></span></p>
+            <p id="info"></p>
+            <button id="add"></button>
+        </div> -->
+        <!-- <button id="go">Go to basket</button> -->
+    </div>
+
+    <script src="ex2.js" type="text/javascript">
+        // page1();
+        // console.log(window.location.href);
+    </script>
+</body>
+</html>
